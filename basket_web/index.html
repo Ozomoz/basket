@@ -1,0 +1,88 @@
+<!-- Test -->
+
+<!DOCTYPE html>
+
+<html>
+	
+	
+	<head>
+		
+		<meta charset="UTF-8" />
+	   
+        <link rel="stylesheet" type="text/css" href="css/global.css" />
+        <link rel="stylesheet" type="text/css" href="css/slideshow.css" />
+        
+        <script type="text/javascript" src="js/jQuery/jquery-1.9.1.js"></script>
+        
+		<title>Projet Basket</title>
+		
+	</head>
+	
+	
+	<body>
+	
+		
+	
+		<header>
+			<h1>LOGO</h1>
+		</header>
+		
+		<div class="content" >
+            <div id="content-bkg">
+                <ul class="cb-slideshow">
+                <li><span>Image 01</span></li>
+                <li><span>Image 02</span></li>
+                <li><span>Image 03</span></li>
+                <li><span>Image 04</span></li>
+                <li><span>Image 05</span></li>
+                <li><span>Image 06</span></li>
+            </ul>
+            </div>
+            <div class="panel" id="pan1" >
+                <p>Ceci est le panel 1 !</p>
+            </div>
+            <div class="panel" id="pan2" >
+                <p>Ceci est le panel 2 !</p>
+            </div>
+            <div class="panel" id="pan3" >
+                <p>Ceci est le panel 3 !</p>
+            </div>
+        </div>
+		
+		<footer>
+			contenu footer
+		</footer>
+        
+        <script>
+            function height(bloc){
+                var hauteur;
+                var pad;
+                if( typeof( window.innerWidth ) == 'number' ) {
+                    pad =       (window.innerHeight-125);
+                    hauteur =    window.innerHeight-pad;
+                }
+                else if( document.documentElement && document.documentElement.clientHeight ) {
+                    pad =       (document.documentElement.clientHeight);
+                    hauteur =    document.documentElement.clientHeight;
+                }
+                document.getElementById(bloc).style.height = hauteur+"px";
+                document.getElementById(bloc).style.paddingTop = pad+"px";
+            }
+            window.onload =		function(){ height("pan1") };
+            window.onresize = 	function(){ height("pan1") };
+        </script>
+        
+        <script>
+            $(window).scroll(function(e){
+                parallax();
+            });
+            function parallax(){
+                var scrolled = $(window).scrollTop();
+                $('.cb-slideshow').css('top',-(scrolled*-0.25)+'px');
+            }
+        </script>
+		
+	</body>
+	
+	
+</html>

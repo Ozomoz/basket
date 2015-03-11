@@ -1,0 +1,71 @@
+/* BKG */
+body {
+    background-color: #000;
+}
+
+/* HEADER ET FOOTER */
+header {
+    background-color: #f4f4f4;
+    opacity: .7;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70px;
+    text-align: center;
+    z-index: 2000;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1500;
+}
+
+/* Fond */
+.content {
+    margin-left: -8px;
+    margin-right: -8px;
+    
+}
+
+.content-bkg {
+    background-image: url(../img/content-bkg.jpg);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+/* panels */
+.panel {
+    margin-bottom: -16px;
+    z-index: 1000;
+}
+
+#pan1 {
+    margin-top: -8px;
+    background-color: transparent;
+}
+
+#pan2 {
+    background-color: #f4f4f4;
+    height: 500px; /* au hasard... */
+}
+
+#pan3 {
+    background-color: transparent;
+    height: 500px; /* au hasard... */
+}
+
+/* TITRES */
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    
+}
